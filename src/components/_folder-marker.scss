@@ -1,0 +1,21 @@
+// File Explorer folder open/close marker
+.#{ $wrapper-class } {
+
+  summary {
+    display: list-item;
+
+    &::marker,
+    &::-webkit-details-marker {
+      content: var(--#{ $variable-prefix }folder-marker-open);
+      color: var(--#{ $variable-prefix }folder-marker-color);
+    }
+  }
+
+  details[open] > summary {
+    &::marker,
+    &::-webkit-details-marker {
+      content: var(--#{ $variable-prefix }folder-marker-close);
+    }
+  }
+
+}

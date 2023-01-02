@@ -1,0 +1,15 @@
+// File Explorer folder indicator view
+.#{ $wrapper-class } {
+
+  &.folder-indicator {
+    summary + ul {
+      padding-inline-start: var(--#{ $variable-prefix }folder-indicator-indent);
+
+      li {
+        border-inline-start: var(--#{ $variable-prefix }folder-indicator-width)
+          var(--#{ $variable-prefix }folder-indicator-style) var(--#{ $variable-prefix }folder-indicator-color);
+      }
+    }
+  }
+
+}

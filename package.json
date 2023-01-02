@@ -1,0 +1,69 @@
+{
+  "name": "file-explorer.css",
+  "version": "1.0.0",
+  "description": "An open source 'File Explorer' component using just HTML & CSS.",
+  "author": "Rami Yushuvaev",
+  "homepage": "https://FileExplorer.org/",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "html",
+    "css-library",
+    "file",
+    "explorer",
+    "file-explorer",
+    "scss",
+    "ui-component"
+  ],
+  "main": "dist/file-explorer.min.css",
+  "files": [
+    "dist/file-explorer.css",
+    "dist/file-explorer.css.map",
+    "dist/file-explorer.min.css"
+  ],
+  "scripts": {
+    "build": "npm-run-all css-compile css-combine css-prefixes css-minify css-minify-fix",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents false --source-map-embed false --precision 6 src/ -o dist/",
+    "css-combine": "postcss dist/file-explorer.css --use postcss-combine-duplicated-selectors --output dist/file-explorer.css",
+    "css-prefixes": "postcss dist/file-explorer.css --use autoprefixer --output dist/file-explorer.css",
+    "css-minify": "postcss dist/file-explorer.css --use cssnano --no-map --output dist/file-explorer.min.css",
+    "css-minify-fix": "postcss dist/file-explorer.min.css --use postcss-pseudo-element-colons --no-map --output dist/file-explorer.min.css",
+    "watch": "nodemon -e scss,html --watch src --exec \"npm run build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FileExplorerCSS/file-explorer.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FileExplorerCSS/file-explorer.css/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-pseudo-element-colons": "^1.0.2"
+  },
+  "cssnano": {
+    "preset": [
+      "default",
+      {
+        "calc": false,
+        "discardComments": {
+          "removeAll": true
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    ">1%",
+    "not dead",
+    "not ie >= 0",
+    "not op_mini all",
+    "last 2 versions"
+  ]
+}

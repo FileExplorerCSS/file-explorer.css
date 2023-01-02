@@ -1,0 +1,26 @@
+// File Explorer CSS variables & default values
+.#{ $wrapper-class } {
+  --#{ $variable-prefix }line-height: 1.5rem;
+
+  --#{ $variable-prefix }folder-indent: 2ch;
+
+  --#{ $variable-prefix }folder-marker-open: '';
+  --#{ $variable-prefix }folder-marker-close: '';
+  --#{ $variable-prefix }folder-marker-color: currentColor;
+
+  --#{ $variable-prefix }folder-indicator-indent: 0.25rem;
+  --#{ $variable-prefix }folder-indicator-width: 1px;
+  --#{ $variable-prefix }folder-indicator-style: solid;
+  --#{ $variable-prefix }folder-indicator-color: #666;
+
+  --#{ $variable-prefix }tree-indent: 0.25rem;
+  --#{ $variable-prefix }tree-width: 1px;
+  --#{ $variable-prefix }tree-style: solid;
+  --#{ $variable-prefix }tree-color: #666;
+
+  --#{ $variable-prefix }hover-bg-color: transparent;
+  --#{ $variable-prefix }hover-text-color: currentColor;
+
+  --#{ $variable-prefix }active-bg-color: transparent;
+  --#{ $variable-prefix }active-text-color: currentColor;
+}

@@ -1,0 +1,19 @@
+// File Explorer reset
+.#{ $wrapper-class } {
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: auto;
+  isolation: isolate;
+
+  ul,
+  li,
+  details,
+  summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: start;
+    box-sizing: border-box;
+  }
+
+}

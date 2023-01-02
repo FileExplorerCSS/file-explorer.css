@@ -1,0 +1,28 @@
+// File Explorer hover & focus state
+.#{ $wrapper-class } {
+
+  summary::after,
+  li:not(:has(details))::after {
+    display: block;
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: var(--#{ $variable-prefix }line-height);
+    background-color: transparent;
+    z-index: -1;
+  }
+
+  summary:hover,
+  summary:focus,
+  li:not(:has(details)):hover,
+  li:not(:has(details)):focus {
+    color: var(--#{ $variable-prefix }hover-text-color);
+
+    &::after {
+      background-color: var(--#{ $variable-prefix }hover-bg-color);
+      box-shadow: 100px 0 0 0 var(--#{ $variable-prefix }hover-bg-color),
+        -100px 0 0 0 var(--#{ $variable-prefix }hover-bg-color);
+    }
+  }
+
+}

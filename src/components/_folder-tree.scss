@@ -1,0 +1,39 @@
+// File Explorer folder tree view
+.#{ $wrapper-class } {
+
+  &.folder-tree {
+    summary + ul {
+      padding-inline-start: var(--#{ $variable-prefix }tree-indent);
+
+      li {
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          inset: 0;
+          width: calc(var(--#{ $variable-prefix }folder-indent) + var(--#{ $variable-prefix }tree-width));
+          height: calc(var(--#{ $variable-prefix }line-height) / 2);
+          border-style: var(--#{ $variable-prefix }tree-style);
+          border-color: var(--#{ $variable-prefix }tree-color);
+          border-width: 0;
+        }
+
+        &:not(:last-of-type) {
+          border-inline-start: var(--#{ $variable-prefix }tree-width) var(--#{ $variable-prefix }tree-style)
+            var(--#{ $variable-prefix }tree-color);
+          &:before {
+            border-block-end-width: var(--#{ $variable-prefix }tree-width);
+          }
+        }
+
+        &:last-of-type {
+          &:before {
+            border-inline-start-width: var(--#{ $variable-prefix }tree-width);
+            border-block-end-width: var(--#{ $variable-prefix }tree-width);
+          }
+        }
+      }
+    }
+  }
+
+}

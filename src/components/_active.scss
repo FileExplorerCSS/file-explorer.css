@@ -1,0 +1,15 @@
+// File Explorer active element
+.#{ $wrapper-class } {
+
+  summary.active,
+  li.active:not(:has(details)) {
+    color: var(--#{ $variable-prefix }active-text-color);
+
+    &::after {
+      background-color: var(--#{ $variable-prefix }active-bg-color);
+      box-shadow: 100px 0 0 0 var(--#{ $variable-prefix }active-bg-color),
+        -100px 0 0 0 var(--#{ $variable-prefix }active-bg-color);
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+/*
+ * file-explorer.css 1.0.0 (https://FileExplorer.org/)
+ * Copyright 2023 Rami Yushuvaev
+ * Licensed under MIT
+ */
+
+$wrapper-class: 'file-explorer';
+$variable-prefix: 'fe-';
+
+// General
+@import "general/variables";
+@import "general/reset";
+@import "general/structure";
+
+// Components
+@import "components/folder-marker";
+@import "components/folder-indicator";
+@import "components/folder-tree";
+@import "components/hover-focus";
+@import "components/active";

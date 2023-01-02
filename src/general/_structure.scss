@@ -1,0 +1,43 @@
+// File Explorer structure
+.#{ $wrapper-class } {
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+  }
+
+  li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    line-height: var(--#{ $variable-prefix }line-height);
+
+    ul {
+      li {
+        padding-inline-start: var(--#{ $variable-prefix }folder-indent);
+      }
+    }
+  }
+
+  details {
+    width: 100%;
+  }
+
+  summary {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    line-height: var(--#{ $variable-prefix }line-height);
+    height: var(--#{ $variable-prefix }line-height);
+    overflow: hidden;
+
+    &:focus-visible {
+      outline: 1px dotted #000;
+    }
+  }
+
+}
