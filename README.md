@@ -14,4 +14,4 @@ If you like the project, **please consider to star the repo on GitHub**.
 
 ## License
 
-Charts.css is licensed under the [MIT license](https://opensource.org/licenses/MIT).
+file-explorer.css is licensed under the [MIT license](https://opensource.org/licenses/MIT).
